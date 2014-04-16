@@ -1,0 +1,12 @@
+# python shit
+*.py[cod]
+
+# mac shit
+.DS_Store
+
+# venv shit
+bin
+include
+lib
+share
+.Python
