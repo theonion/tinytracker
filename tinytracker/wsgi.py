@@ -10,6 +10,7 @@ from gevent import socket
 
 event_queue = queue.Queue()
 CARBON_ENDPOINT = os.environ.get("CARBON_ENDPOINT")
+INTERVAL = os.environ.get("INTERVAL", 10)
 GIF_DATA = base64.b64decode("R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
 
 
@@ -23,7 +24,7 @@ def send_events(message):
 
 def count_events():
     while True:
-        gevent.sleep(1)
+        gevent.sleep(INTERVAL)
         counter = collections.Counter()
 
         now = int(time.time())
