@@ -9,5 +9,6 @@ setup(
     packages=["tinytracker"],
     install_requires=[
         "gevent >= 1.0"
-    ]
+    ],
+    url="https://github.com/theonion/tinytracker"
 )
