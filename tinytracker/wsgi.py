@@ -51,7 +51,7 @@ gevent.spawn(count_events)
 
 
 def application(env, start_response):
-    if ["PATH_INFO"] == "/track.gif":
+    if env["PATH_INFO"] == "/track.gif":
         start_response("200 OK", [("Content-Type", "image/gif")])
         yield GIF_DATA
 
